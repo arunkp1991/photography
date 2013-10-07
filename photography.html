@@ -5,23 +5,24 @@
         <link rel="stylesheet" type="text/css" href="css/style.css"/>
     </head>
 
-    <body>
+    <body id="body">
+        <div id="sign_in_box">
+            <form id="signinform">
+                <input type="text" name="email" placeholder="Email Address" required=""/><div id="semail_error" class="form_error"></div><br>
+                <input type="password" name="password" placeholder="Password" required=""/><div id="spassword_error" class="form_error"></div><br>
+                <input type="submit" value="Sign In"/><br><br><div id="loginstatus" class="form_error"></div>
+            </form>
+        </div>
+        <div id="join_box">
+            <form id="joinform">
+                <input type="text" name="name" placeholder="Name" /><div id="name_error" class="form_error"></div><br>
+                <input type="text" name="email" placeholder="Email Address" /><div id="email_error" class="form_error"></div><br>
+                <input type="password" name="password" placeholder="Password"/><div id="password_error" class="form_error"></div><br>
+                <input type="password" name="repassword" placeholder="Retype Password"/><div id="repassword_error" class="form_error"></div><br>
+                <input type="submit" value="Join"/><br><br><div id="joinstatus" class="form_error"></div>
+            </form>
+        </div>
         <div class="main">
-            <div id="join_box">
-                <div class="join_box_top">
-                    <p>Create a new account</p>
-                    <div class="join_box_close"></div>
-                </div>
-                <div class="join_box_content">
-                    <form method="post">
-                        <input type="text" name="first_name" placeholder="First Name"/>
-                        <input type="text" name="last_name" placeholder="Last Name"/>
-                        <input type="email" name="email_address" placeholder="Email Address"/>
-                        <input type="password" name="password" placeholder="Password"/>
-                        <input type="password" name="re_password" placeholder="Retype Password"/> 
-                    </form>
-                </div>
-            </div>
             <div class="header">
                 <div class="sign">
                     <div class="sign_in">Sign In</div>
@@ -29,13 +30,14 @@
                 </div>
             </div>
             <div class="body">
-
+                <div id="test" style="color:white;"></div>
             </div>
             <div class="footer">
 
             </div>
         </div>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
         <script src="js/jquery.js"></script>
     </body>
 </html>

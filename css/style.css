@@ -5,14 +5,15 @@ html{
     -o-backgroud-size: cover;
     background-size: cover;
 }
-body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, 
-form, input, textarea, p, blockquote, th, td {
+*{
     margin: 0;
     padding: 0;
     font-family: sans-serif;
 }
 div.sign{
-    float: left;
+    margin-top: 20px;
+    margin-right: 30px;
+    float: right;
     cursor: pointer;
     overflow: auto;
     color: #717171;
@@ -31,25 +32,114 @@ div.sign_in:hover, div.join:hover{
     color: white;
     background-color: #404040;
 }
-div#join_box{
-    position:fixed;
-    z-index: 100;  
-    top:50%;  
-    left:50%;  
-    margin:-150px 0 0 -250px;  
-    width:500px;  
-    height:300px; 
+div#sign_in_box{
     background-color: white;
+    margin-top: 60px;
+    margin-right: 20px;
+    right:0;
+    position: absolute;
+    display: none;
+    padding: 15px 0px 5px 0px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 5px 5px 5px black;
 }
-.join_box_top{
-    background-color: #eed11e;
-    overflow: auto;
+#sign_in_box {
+	position: relative;
+	background: #ffffff;
+	border: 1px solid #ffffff;
 }
-.join_box_top p{
-    float:left;
+#sign_in_box:after, #sign_in_box:before {
+	bottom: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
 }
-.join_box_close{
+
+#sign_in_box:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #ffffff;
+	border-width: 10px;
+	left: 65%;
+	margin-left: -10px;
 }
-.join_box_content{
-    clear: both;
+#sign_in_box:before {
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #ffffff;
+	border-width: 11px;
+	left: 65%;
+	margin-left: -11px;
+}
+div#join_box{
+    background-color: white;
+    margin-top: 60px;
+    margin-right: 20px;
+    right:0;
+    position: absolute;
+    display: none;
+    padding: 15px 0px 5px 0px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 5px 5px 5px black;
+}
+#join_box {
+	position: relative;
+	background: #ffffff;
+	border: 1px solid #ffffff;
+}
+#join_box:after, #join_box:before {
+	bottom: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+#join_box:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #ffffff;
+	border-width: 10px;
+	left: 85%;
+	margin-left: -10px;
+}
+#join_box:before {
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #ffffff;
+	border-width: 11px;
+	left: 85%;
+	margin-left: -11px;
+}
+input:not([type=submit]){
+    width: 200px;
+    height: 30px;
+    border: 1px solid #b1b5b2;
+    border-radius: 5px;
+    padding-left: 10px;
+    background-color: #eceae8;
+    margin:5px 20px 0px 20px;
+}
+input:not([type=submit]):focus{
+    border: 1px solid #757575;
+    background-color: #fde4d7;
+}
+input[type=submit]{
+    width: 100px;
+    height: 35px;
+    border-radius: 5px;
+    color: white;
+    border: 1px solid #d24800;
+    background-color: #c55200;
+}
+input[type=submit]:hover{
+    border: 1px solid #a43901;
+    background-color: #db6b1b;
+}
+div.form_error{
+    color: #970218;
+    font-size: 70%;
 }
